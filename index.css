@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+    margin: 0px;
+    padding:0px
+}
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #18cbe7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3em;
+    font-weight: bolder;
+}
