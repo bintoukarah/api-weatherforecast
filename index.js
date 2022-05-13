@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let updateButton = document.getElementById("submit");
     updateButton.addEventListener("click", (event) => { //au click 
         event.preventDefault();
-        let nomVille = document.getElementById("ville").value; //recuper nom de ville
+        let nomVille = document.getElementById("city").value; //recuper nom de ville
         const API_KEY = "45cb0e6d117446dabe3fb0c56ffa888a" 
         //rechercher 
         let URL = `https://api.opencagedata.com/geocode/v1/json?q=${nomVille}&key=${API_KEY}&language=fr&pretty=1`
