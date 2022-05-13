@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateButton.addEventListener("click", (event) => { //au click 
         event.preventDefault();
         let nomVille = document.getElementById("ville").value; //recuper nom de ville
-        const API_KEY = "e950a84242a74027bd82bf9d1ceeca23" 
+        const API_KEY = "45cb0e6d117446dabe3fb0c56ffa888a" 
         //rechercher 
         let URL = `https://api.opencagedata.com/geocode/v1/json?q=${nomVille}&key=${API_KEY}&language=fr&pretty=1`
         fetch(URL)
@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(data => {
                 const myDate = new Date();
-                const curr_day = myDate.getDay(); //extraire l'index de ma journee
-                let d_names = ["Sunday", "Monday", "Tuesday", "Wednesday",
-                    "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday",
+                const curr_day = myDate.getDay(); //extraire l'index de ma journee}
+                let d_names = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday",
                     "Thursday", "Friday", "Saturday"];
                 let theDay = d_names[curr_day];//associer l'index au nom de ma journee
                 // afficher une journée
@@ -32,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                  }
                 let donGeo = data.results[0].geometry;// extraire lattitude et longitude de ma ville
                 console.log(donGeo);
-                let lat = donGeo.lat;//lattitude
+                let lat = donGeo.lat;//latitude
                 let lon = donGeo.lng;//longitude
-                const APIKEY = "71bb893f2fa2cebc451e6c0e38c8aa52"
+                const APIKEY = "27e489831f7a566877884878940a4f9d";
                 let URL2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKEY}`//utiliser les donnees geo or avoir ma meteo
                 fetch(URL2)
                     .then(response => {
